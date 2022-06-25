@@ -1,4 +1,4 @@
-# Shop
+# E-Commerce Template
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
@@ -18,9 +18,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 - Navbar
     - UI - Done
-    - Links - TBF
-- Footer
+    - Links
+- Footer - Done
 - Home Page
+- Products Page - Done
 - Product Page
+- Cart
 - Checkout Page
 - About Page
+- Filter Functionality
