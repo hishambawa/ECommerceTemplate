@@ -1,0 +1,40 @@
+.is-circle {
+    border-radius: 50%;
+}
+
+/* Scale from center */
+.navbar-element {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    font-weight: bold;
+}
+.navbar-element::after {
+    opacity: 1 !important;
+    transform: scale(0);
+    transform-origin: center;
+
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: hotpink;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+  
+.navbar-element:hover::after,
+.navbar-element:focus::after{
+    transform: scale(1);
+}
+
+.logo {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.cart {
+    position: relative;
+}
