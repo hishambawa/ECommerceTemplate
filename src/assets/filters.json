@@ -1,0 +1,32 @@
+[
+    {
+        "type": "category",
+        "value": "tshirts",
+        "display": "T-Shirts"
+    },
+    {
+        "type": "category",
+        "value": "shorts",
+        "display": "Shorts"
+    },
+    {
+        "type": "category",
+        "value": "shoes",
+        "display": "Shoes"
+    },
+    {
+        "type": "color",
+        "value": "red",
+        "display": "Red"
+    },
+    {
+        "type": "color",
+        "value": "blue",
+        "display": "Blue"
+    },
+    {
+        "type": "color",
+        "value": "yellow",
+        "display": "Yellow"
+    }
+]

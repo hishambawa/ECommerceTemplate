@@ -1,0 +1,49 @@
+<div class="level is-mobile mt-6">
+    <div class="level-left">
+        <button class="level-item button" (click)="showOptions('category')"> 
+            <span>Category</span>
+            <span class="icon is-small">
+                <i *ngIf="!isCategory" class="fas fa-plus"></i>
+                <i *ngIf="isCategory" class="fas fa-minus"></i>
+            </span>
+        </button>
+        <button class="level-item button" (click)="showOptions('color')">
+            <span>Color</span>
+            <span class="icon is-small">
+                <i *ngIf="!isColor" class="fas fa-plus"></i>
+                <i *ngIf="isColor" class="fas fa-minus"></i>
+            </span>
+        </button>
+        <button class="level-item button" (click)="showOptions('price')">
+            <span>Price</span>
+            <span class="icon is-small">
+                <i *ngIf="!isPrice" class="fas fa-plus"></i>
+                <i *ngIf="isPrice" class="fas fa-minus"></i>
+            </span>
+        </button>
+    </div>
+</div>
+
+<div class="box level px-3" *ngIf="isCategory">
+    <div class="level-left">
+        <div class="level-item" *ngFor="let filter of filters | filter: 'category'">
+            <input [id]="filter.value" type="checkbox" class="checkbox">
+            <label [for]="filter.value">{{ filter.display }}</label>
+        </div>
+    </div>
+</div>
+
+<div class="box level px-3" *ngIf="isColor">
+    <div class="level-left">
+        <div class="level-item" *ngFor="let filter of filters | filter: 'color'">
+            <input [id]="filter.value" type="checkbox" class="checkbox">
+            <label [for]="filter.value">{{ filter.display }}</label>
+        </div>
+    </div>
+</div>
+
+<div class="box level px-3" *ngIf="isPrice">
+    <div class="level-left">
+        <input type="range" class="level-item">
+    </div>
+</div>

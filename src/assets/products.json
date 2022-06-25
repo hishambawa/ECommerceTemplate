@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Manchester United Home T‑Shirt",
+        "price": 10000,
+        "frontImage": "/assets/images/001-front.png",
+        "backImage": "/assets/images/001-back.png",
+        "category": "tshirt",
+        "available": true
+    },
+    {
+        "name": "Manchester United Away T‑Shirt",
+        "price": 10000,
+        "frontImage": "/assets/images/002-front.png",
+        "backImage": "/assets/images/002-back.png",
+        "category": "tshirt",
+        "available": true
+    },
+    {
+        "name": "Manchester United Home Shorts",
+        "price": 5000,
+        "frontImage": "/assets/images/003-front.png",
+        "backImage": "/assets/images/003-back.png",
+        "category": "short",
+        "available": true
+    },
+
+    {
+        "name": "Manchester United Away T‑Shirt",
+        "price": 10000,
+        "frontImage": "/assets/images/002-front.png",
+        "backImage": "/assets/images/002-back.png",
+        "category": "tshirt",
+        "available": false
+    },
+    {
+        "name": "Manchester United Home Shorts",
+        "price": 5000,
+        "frontImage": "/assets/images/003-front.png",
+        "backImage": "/assets/images/003-back.png",
+        "category": "short",
+        "available": true
+    },
+    {
+        "name": "Manchester United Home T‑Shirt",
+        "price": 10000,
+        "frontImage": "/assets/images/001-front.png",
+        "backImage": "/assets/images/001-back.png",
+        "category": "tshirt",
+        "available": true
+    }
+]
