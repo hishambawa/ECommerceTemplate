@@ -16,7 +16,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## TODO
 
-Home Page
-Product Page
-Checkout Page
-About Page
+- Navbar
+- Footer
+- Home Page
+- Product Page
+- Checkout Page
+- About Page
