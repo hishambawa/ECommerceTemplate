@@ -9,6 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   isHomePage!: boolean;
+  isCollapsed: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -19,8 +20,15 @@ export class NavbarComponent implements OnInit {
 
         if(url == '/') this.isHomePage = true;
         else this.isHomePage = false;
+
+        // Hide the navbar on mobile after clicking on a link
+        this.isCollapsed = false;
       }
     });
+  }
+
+  showNavbar(): void {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 }

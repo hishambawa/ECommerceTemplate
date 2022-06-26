@@ -1,5 +1,5 @@
 /* Scale from center */
-.navbar-element {
+.navbar-element, .navbar-element-mobile {
     display: block;
     position: relative;
     padding: 0.2em 0;
@@ -26,9 +26,17 @@
     transform: scale(1);
 }
 
+.navbar-mobile {
+    padding-bottom: 20px;
+}
+
+.navbar-element-mobile {
+    padding: 10px;
+}
+
 .logo {
     font-size: 38px;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .cart {
@@ -41,5 +49,9 @@
 }
 
 .navbar-image .badge {
+    box-shadow: none;
+}
+
+.is-mobile .badge {
     box-shadow: none;
 }

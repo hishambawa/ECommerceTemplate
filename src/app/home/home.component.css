@@ -1,8 +1,7 @@
 .hero-main {
-    background-image: url('/assets/images/home/home-1.jpg');
+    background-image: url('/assets/images/home/home-1-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    transition: background-image 2s;
 }
 
 .image-container {
@@ -23,4 +22,18 @@
   left: 32px;
   font-size: 52px;
   font-weight: bold;
+}
+
+/* Set min height to 500px upto desktop */
+@media(max-width: 1407px) {
+    .hero-main {
+        min-height: 500px;
+    }
+}
+
+/* Desktop */
+@media(min-width: 1408px) {
+    .hero-main {
+        background-image: url('/assets/images/home/home-1.jpg');
+    }
 }
