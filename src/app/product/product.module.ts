@@ -4,8 +4,8 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { FilterComponent } from './filter/filter.component';
 import { FilterPipe } from './filter/filter.pipe';
-
-
+import { DetailsComponent } from './details/details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,10 +13,12 @@ import { FilterPipe } from './filter/filter.pipe';
     ListComponent,
        ItemComponent,
        FilterComponent,
-       FilterPipe
+       FilterPipe,
+       DetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ListComponent
