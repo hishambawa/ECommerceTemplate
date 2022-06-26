@@ -16,6 +16,8 @@ export class FilterComponent implements OnInit {
   isColor: boolean = false;
   isPrice: boolean = false;
 
+  isVisible: boolean = false;
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -51,6 +53,10 @@ export class FilterComponent implements OnInit {
         this.isColor = false;
         break;
     }
+  }
+
+  toggleFilter(): void {
+    this.isVisible = !this.isVisible;
   }
 
 }
