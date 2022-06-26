@@ -3,8 +3,8 @@
         "id": 1,
         "name": "Manchester United Home T‑Shirt",
         "price": 10000,
-        "frontImage": "/assets/images/001-front.png",
-        "backImage": "/assets/images/001-back.png",
+        "frontImage": "/assets/images/products/001-front.png",
+        "backImage": "/assets/images/products/001-back.png",
         "category": "tshirt",
         "available": true
     },
@@ -12,8 +12,8 @@
         "id": 2,
         "name": "Manchester United Away T‑Shirt",
         "price": 10000,
-        "frontImage": "/assets/images/002-front.png",
-        "backImage": "/assets/images/002-back.png",
+        "frontImage": "/assets/images/products/002-front.png",
+        "backImage": "/assets/images/products/002-back.png",
         "category": "tshirt",
         "available": true
     },
@@ -21,8 +21,8 @@
         "id": 3,
         "name": "Manchester United Home Shorts",
         "price": 5000,
-        "frontImage": "/assets/images/003-front.png",
-        "backImage": "/assets/images/003-back.png",
+        "frontImage": "/assets/images/products/003-front.png",
+        "backImage": "/assets/images/products/003-back.png",
         "category": "short",
         "available": true
     },
@@ -31,8 +31,8 @@
         "id": 4,
         "name": "Manchester United Away T‑Shirt",
         "price": 10000,
-        "frontImage": "/assets/images/002-front.png",
-        "backImage": "/assets/images/002-back.png",
+        "frontImage": "/assets/images/products/002-front.png",
+        "backImage": "/assets/images/products/002-back.png",
         "category": "tshirt",
         "available": false
     },
@@ -40,8 +40,8 @@
         "id": 5,
         "name": "Manchester United Home Shorts",
         "price": 5000,
-        "frontImage": "/assets/images/003-front.png",
-        "backImage": "/assets/images/003-back.png",
+        "frontImage": "/assets/images/products/003-front.png",
+        "backImage": "/assets/images/products/003-back.png",
         "category": "short",
         "available": true
     },
@@ -49,8 +49,8 @@
         "id": 6,
         "name": "Manchester United Home T‑Shirt",
         "price": 10000,
-        "frontImage": "/assets/images/001-front.png",
-        "backImage": "/assets/images/001-back.png",
+        "frontImage": "/assets/images/products/001-front.png",
+        "backImage": "/assets/images/products/001-back.png",
         "category": "tshirt",
         "available": true
     }

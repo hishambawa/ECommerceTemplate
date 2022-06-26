@@ -1,1 +1,28 @@
-<p>home works!</p>
+<section class="hero is-large hero-main">
+    <div class="hero-body">
+        <p class="title is-size-4-mobile">First Impressions Last a Lifetime!</p>
+        <p class="subtitle is-size-6-mobile">Make yours today...</p>
+        <a routerLink="/products" class="button is-rounded is-dark">Explore</a>
+    </div>
+</section>
+
+<section class="hero is-medium is-dark">
+    <div class="hero-body">
+        <p class="title has-text-centered pb-6 has-text-weight-bold">Shop for</p>
+        
+        <div class="columns">
+            <div class="column image-container">
+                <a routerLink="/products" [queryParams]="{filter: 'gender', type: 'men'}" title="Shop for Men">
+                    <img class="image" src="/assets/images/home/home-sub-1.jpg" alt="">
+                    <p class="image-bottom-left">Men</p>
+                </a>
+            </div>
+            <div class="column image-container">
+                <a routerLink="/products" [queryParams]="{filter: 'gender', type: 'women'}" title="Shop for Women">
+                    <img class="image" src="/assets/images/home/home-sub-2.jpg" alt="">
+                    <p class="image-bottom-left">Women</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

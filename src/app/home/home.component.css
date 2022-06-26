@@ -1,0 +1,26 @@
+.hero-main {
+    background-image: url('/assets/images/home/home-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 2s;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image {
+    opacity: 0.7;
+}
+
+.image:hover {
+    filter: brightness(70%);
+}
+
+.image-bottom-left {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-size: 52px;
+  font-weight: bold;
+}

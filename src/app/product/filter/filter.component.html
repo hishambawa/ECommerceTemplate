@@ -1,5 +1,12 @@
 <div class="level is-mobile mt-6">
     <div class="level-left">
+        <button class="level-item button" (click)="showOptions('gender')"> 
+            <span>Gender</span>
+            <span class="icon is-small">
+                <i *ngIf="!isGender" class="fas fa-plus"></i>
+                <i *ngIf="isGender" class="fas fa-minus"></i>
+            </span>
+        </button>
         <button class="level-item button" (click)="showOptions('category')"> 
             <span>Category</span>
             <span class="icon is-small">
@@ -21,6 +28,15 @@
                 <i *ngIf="isPrice" class="fas fa-minus"></i>
             </span>
         </button>
+    </div>
+</div>
+
+<div class="box level px-3" *ngIf="isGender">
+    <div class="level-left">
+        <div class="level-item" *ngFor="let filter of filters | filter: 'gender'">
+            <input [id]="filter.value" type="checkbox" class="checkbox">
+            <label [for]="filter.value">{{ filter.display }}</label>
+        </div>
     </div>
 </div>
 

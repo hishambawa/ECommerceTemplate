@@ -11,6 +11,7 @@ export class FilterComponent implements OnInit {
 
   filters: Filter[] = [];
 
+  isGender: boolean = false;
   isCategory: boolean = false;
   isColor: boolean = false;
   isPrice: boolean = false;
@@ -25,18 +26,27 @@ export class FilterComponent implements OnInit {
 
   showOptions(option: string): void {
     switch (option.toLocaleLowerCase()) {
+      case 'gender':
+        this.isGender = !this.isGender;
+        this.isCategory = false;
+        this.isColor = false;
+        this.isPrice = false;
+        break;
       case 'category':
         this.isCategory = !this.isCategory;
+        this.isGender = false;
         this.isColor = false;
         this.isPrice = false;
         break;
       case 'color':
         this.isColor = !this.isColor;
+        this.isGender = false;
         this.isCategory = false;
         this.isPrice = false;
         break;
       case 'price':
         this.isPrice = !this.isPrice;
+        this.isGender = false;
         this.isCategory = false;
         this.isColor = false;
         break;

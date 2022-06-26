@@ -1,5 +1,15 @@
 [
     {
+        "type": "gender",
+        "value": "men",
+        "display": "Men"
+    },
+    {
+        "type": "gender",
+        "value": "women",
+        "display": "Women"
+    },
+    {
         "type": "category",
         "value": "tshirts",
         "display": "T-Shirts"

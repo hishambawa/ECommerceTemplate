@@ -30,7 +30,8 @@
               "src/styles.css",
               "node_modules/bulma/css/bulma.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "node_modules/@creativebulma/bulma-badge/dist/bulma-badge.min.css"
+              "node_modules/@creativebulma/bulma-badge/dist/bulma-badge.min.css",
+              "node_modules/bulma-carousel/dist/css/bulma-carousel.min.css"
             ],
             "scripts": []
           },
