@@ -7,7 +7,7 @@
         </div>
         <div class="card-content">
           <h2 class="title is-6">{{ product.name }}</h2>
-          <p *ngIf="product.available || !hovered" class="subtitle is-6">{{ product.price | currency: 'Rs. ' }}</p>
+          <p *ngIf="product.available || !hovered" class="subtitle is-6">{{ product.price | currency: 'LKR ' }}</p>
           <p *ngIf="!product.available && hovered" class="subtitle is-6 has-text-danger has-text-weight-medium">Out of stock!</p>
         </div>
     </a>

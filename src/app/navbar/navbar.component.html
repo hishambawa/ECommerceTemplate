@@ -1,4 +1,4 @@
-<div [ngClass]="{'navbar-image': isHomePage}" class="is-hidden-touch">
+<div [ngClass]="{'navbar-image': isHomePage, 'navbar-contact': isContactPage }" class="is-hidden-touch">
     <nav class="container level py-6">
         <p class="level-item has-text-centered">
             <a routerLink="/" class="navbar-element has-text-dark">Home</a>
@@ -8,10 +8,10 @@
         </p>
         <p class="level-item has-text-centered logo">LOGO</p>
         <p class="level-item has-text-centered">
-            <a routerLink="/about" class="navbar-element has-text-dark">About</a>
+            <a routerLink="/contact" class="navbar-element has-text-dark">Contact</a>
         </p>
         <p class="level-item has-text-centered">
-            <a routerLink="/contact" class="navbar-element has-text-dark">Contact</a>
+            <a routerLink="/account" class="navbar-element has-text-dark">Account</a>
         </p>
     
         <div class="cart">

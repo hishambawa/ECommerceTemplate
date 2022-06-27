@@ -12,3 +12,9 @@ body {
 .has-margin-auto {
     margin: auto !important;
 }
+
+@media (min-width: 768px) {
+    .pl-7-tablet {
+        padding-left: 6rem;
+    }
+}

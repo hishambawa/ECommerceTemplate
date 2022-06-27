@@ -9,6 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   isHomePage!: boolean;
+  isContactPage!: boolean;
   isCollapsed: boolean = false;
 
   constructor(private router: Router) {}
@@ -18,8 +19,18 @@ export class NavbarComponent implements OnInit {
       if(event instanceof NavigationEnd) {
         const url = event.urlAfterRedirects;
 
-        if(url == '/') this.isHomePage = true;
-        else this.isHomePage = false;
+        if(url == '/'){
+          this.isHomePage = true;
+          this.isContactPage = false;
+        } 
+        else if(url == '/contact') {
+          this.isContactPage = true;
+          this.isHomePage = false;
+        }
+        else{
+           this.isHomePage = false;
+           this.isContactPage = false;
+        }
 
         // Hide the navbar on mobile after clicking on a link
         this.isCollapsed = false;
