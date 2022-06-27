@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
     - UI - Done
     - Links - Done
 - Footer - Done
-- Home Page - Ongoing
+- Home Page - Done
 - Products Page - Done
 - Product Page
 - Cart
