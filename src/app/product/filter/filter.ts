@@ -1,5 +1,5 @@
 export interface Filter {
     type: string;
-    value: string;
+    value: string | number;
     display: string;
 }

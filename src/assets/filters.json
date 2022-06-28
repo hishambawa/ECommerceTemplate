@@ -38,5 +38,20 @@
         "type": "color",
         "value": "yellow",
         "display": "Yellow"
+    },
+    {
+        "type": "price",
+        "value": 5000,
+        "display": "Under LKR 5,000"
+    },
+    {
+        "type": "price",
+        "value": 10000,
+        "display": "Under LKR 10,000"
+    },
+    {
+        "type": "price",
+        "value": 15000,
+        "display": "Under LKR 15,000"
     }
 ]

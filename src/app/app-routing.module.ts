@@ -6,10 +6,10 @@ import { DetailsComponent } from './product/details/details.component';
 import { ListComponent } from './product/list/list.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full', title: 'Logo | Home'},
-  { path: 'products', component: ListComponent, pathMatch: 'full', title: 'Logo | Products'},
-  { path: 'products/:productId', component: DetailsComponent, pathMatch: 'full', title: 'Logo | Products'},
-  { path: 'contact', component: ContactComponent, pathMatch: 'full', title: 'Logo | Contact Us'},
+  { path: '', component: HomeComponent, pathMatch: 'full', title: 'ARENA | Home'},
+  { path: 'products', component: ListComponent, pathMatch: 'full', title: 'ARENA | Products'},
+  { path: 'products/:productId', component: DetailsComponent, pathMatch: 'full', title: 'ARENA | Products'},
+  { path: 'contact', component: ContactComponent, pathMatch: 'full', title: 'ARENA | Contact Us'},
 ];
 
 @NgModule({

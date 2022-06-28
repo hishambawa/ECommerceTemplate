@@ -69,7 +69,10 @@
 
 <div class="box level px-3" *ngIf="isPrice">
     <div class="level-left">
-        <input type="range" class="level-item">
+        <div class="level-item" *ngFor="let filter of filters | filter: 'price'">
+            <input [id]="filter.value" type="checkbox" class="checkbox">
+            <label [for]="filter.value">{{ filter.display }}</label>
+        </div>
     </div>
 </div>
 
@@ -117,8 +120,9 @@
                 <a class="panel-block is-block">
                     <details>
                         <summary>Price</summary>
-                        <div class="py-2">
-                            <input type="range" name="" id="">
+                        <div class="py-2" *ngFor="let filter of filters | filter: 'price'">
+                            <input [id]="filter.value" type="checkbox" class="checkbox">
+                            <label [for]="filter.value">{{ filter.display }}</label>
                         </div>
                     </details>
                 </a>

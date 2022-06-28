@@ -6,7 +6,9 @@
         <p class="level-item has-text-centered">
             <a routerLink="/products" class="navbar-element has-text-dark">Products</a>
         </p>
-        <p class="level-item has-text-centered logo">LOGO</p>
+        <p class="level-item has-text-centered">
+            <a class="logo" routerLink="/">ARENA</a>
+        </p>
         <p class="level-item has-text-centered">
             <a routerLink="/contact" class="navbar-element has-text-dark">Contact</a>
         </p>
@@ -17,9 +19,9 @@
                     <span class="icon is-small">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </span>
-                    <span>Cart</span>
+                    <span class="has-text-weight-bold">Cart</span>
                 </button>
-                <span class="badge is-bottom-right is-dark">10</span>
+                <span class="badge is-bottom-right is-dark has-text-weight-medium">10</span>
             </div>
         </div>
     
@@ -38,7 +40,7 @@
             </div>
         </div>
 
-        <p class="level-item has-text-centered logo"><a class="has-text-light" routerLink="/">LOGO</a></p>
+        <p class="level-item has-text-centered logo"><a class="has-text-light" routerLink="/">ARENA</a></p>
 
         <div class="level-item">
             <button class="button is-circle is-dark" (click)="showNavbar()">
@@ -56,9 +58,6 @@
         </li>
         <li>
             <a routerLink="/products" class="navbar-element-mobile has-text-light">Products</a>
-        </li>
-        <li>
-            <a routerLink="/about" class="navbar-element-mobile has-text-light">About</a>
         </li>
         <li>
             <a routerLink="/contact" class="navbar-element-mobile has-text-light">Contact</a>
