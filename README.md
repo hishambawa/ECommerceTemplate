@@ -25,7 +25,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - Product Page
 - Cart
 - Checkout Page
-- Account Page
 - Contact Page - Done
 - Filter
     - UI - Done

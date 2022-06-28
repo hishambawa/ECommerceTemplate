@@ -48,8 +48,12 @@
     background-size: contain;
 }
 
-.navbar-image .badge, .navbar-contact .badge {
-    box-shadow: none;
+.navbar-image .badge {
+    box-shadow: 0 0 0 2px #ffaa36;;
+}
+
+.navbar-contact .badge {
+    box-shadow: 0 0 0 2px #fec0ca;
 }
 
 .is-mobile .badge {
