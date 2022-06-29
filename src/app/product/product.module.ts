@@ -6,19 +6,20 @@ import { FilterComponent } from './filter/filter.component';
 import { FilterPipe } from './filter/filter.pipe';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-  
     ListComponent,
-       ItemComponent,
-       FilterComponent,
-       FilterPipe,
-       DetailsComponent
+    ItemComponent,
+    FilterComponent,
+    FilterPipe,
+    DetailsComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgbCarouselModule
   ],
   exports: [
     ListComponent

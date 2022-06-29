@@ -16,15 +16,16 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## TODO
 
-- Navbar - Done
-- Footer - Done
-- Home Page - Done
-- Products Page - Done
-- Product Page
+- Navbar - ✅
+- Footer - ✅
+- Home Page - ✅
+- Products Page - ✅
+- Product Page - ✅
 - Cart
 - Checkout Page
-- Contact Page - Done
-- Filter
-    - UI - Done
-    - Responsive - Done
-    - Functionality
+- Contact Page - ✅
+- Filter - ✅
+
+## Future Implementations
+
+- Filter Functionality

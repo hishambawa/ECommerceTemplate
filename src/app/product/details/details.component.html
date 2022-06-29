@@ -1,1 +1,88 @@
-<p>details works!</p>
+<div class="hero is-small container">
+    <div class="hero-body is-dark">
+        <div class="columns">
+            <div class="column is-half">
+                <ngb-carousel [interval]="0">
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img [src]="product?.frontImage" alt="Product Image - Front" class="product-image">
+                      </div>
+            
+                    </ng-template>
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img [src]="product?.backImage" alt="Product Image - Back" class="product-image">
+                      </div>
+                    </ng-template>
+                  </ngb-carousel>
+            </div>
+            <div class="column is-half">
+                <h1 class="title is-spaced"> {{ product?.name }} </h1>
+                <p class="subtitle"> {{ product?.description }} </p>
+                <br>
+                <h2 class="title is-5">{{product?.price | currency: 'LKR '}}</h2>
+
+                <P class="title is-6">Size</P>
+
+                <div class="field is-grouped" *ngIf="product?.category != 'shoes'">
+                    <p class="control">
+                      <button class="button is-dark is-outlined">
+                        <span class="icon"><i class="fa-solid fa-s"></i></span>
+                      </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-m"></i></span>
+                        </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-l"></i></span>
+                        </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-x"></i><i class="fa-solid fa-l"></i></span>
+                        </button>
+                    </p>
+                </div>
+
+                <div class="field is-grouped" *ngIf="product?.category == 'shoes'">
+                    <p class="control">
+                      <button class="button is-dark is-outlined">
+                        <span class="icon"><i class="fa-solid fa-8"></i></span>
+                      </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-9"></i></span>
+                        </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-1"></i><i class="fa-solid fa-0"></i></span>
+                        </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i></span>
+                        </button>
+                    </p>
+                    <p class="control">
+                        <button class="button is-dark is-outlined">
+                            <span class="icon"><i class="fa-solid fa-1"></i><i class="fa-solid fa-2"></i></span>
+                        </button>
+                    </p>
+                </div>
+
+                <br>
+                <p class="title is-6">Availability: 
+                    <span class="has-text-success" *ngIf="product?.available">Available</span>
+                    <span class="has-text-danger" *ngIf="!product?.available">Out of Stock</span>
+                </p>
+
+                <button class="button is-rounded is-dark mt-3" [disabled]="!product?.available">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
