@@ -11,10 +11,12 @@ export class FilterComponent implements OnInit {
 
   filters: Filter[] = [];
 
-  isGender: boolean = false;
-  isCategory: boolean = false;
-  isColor: boolean = false;
-  isPrice: boolean = false;
+  categories = [
+    { "type": "gender", "selected": false, "sub": ["men", "women"] },
+    { "type": "category", "selected": false, "sub": ["t-shirts", "shorts", "shoes"] },
+    { "type": "color", "selected": false, "sub": ["red", "blue", "yellow"] },
+    { "type": "price", "selected": false, "sub": ["under LKR 5,000", "under LKR 10,000", "under LKR 15,000"] },
+  ];
 
   isVisible: boolean = false;
 
@@ -26,33 +28,15 @@ export class FilterComponent implements OnInit {
     });
   }
 
-  showOptions(option: string): void {
-    switch (option.toLocaleLowerCase()) {
-      case 'gender':
-        this.isGender = !this.isGender;
-        this.isCategory = false;
-        this.isColor = false;
-        this.isPrice = false;
-        break;
-      case 'category':
-        this.isCategory = !this.isCategory;
-        this.isGender = false;
-        this.isColor = false;
-        this.isPrice = false;
-        break;
-      case 'color':
-        this.isColor = !this.isColor;
-        this.isGender = false;
-        this.isCategory = false;
-        this.isPrice = false;
-        break;
-      case 'price':
-        this.isPrice = !this.isPrice;
-        this.isGender = false;
-        this.isCategory = false;
-        this.isColor = false;
-        break;
-    }
+  showOptions(type: string) {
+    this.categories.forEach((category) => {
+      if(category.type == type) {
+        category.selected = !category.selected;
+      }
+      else {
+        category.selected = false;
+      }
+    });
   }
 
   toggleFilter(): void {

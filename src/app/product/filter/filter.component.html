@@ -1,33 +1,23 @@
-<div class="level is-hidden-mobile mt-6">
+<div class="is-hidden-mobile level mt-6">
     <div class="level-left">
-        <button class="level-item button" (click)="showOptions('gender')"> 
-            <span>Gender</span>
+        <button class="level-item button" *ngFor="let category of categories" (click)="showOptions(category.type)">
+            <span> {{ category.type | titlecase }} </span>
             <span class="icon is-small">
-                <i *ngIf="!isGender" class="fas fa-plus"></i>
-                <i *ngIf="isGender" class="fas fa-minus"></i>
+                <i *ngIf="!category.selected" class="fas fa-plus"></i>
+                <i *ngIf="category.selected" class="fas fa-minus"></i>
             </span>
         </button>
-        <button class="level-item button" (click)="showOptions('category')"> 
-            <span>Category</span>
-            <span class="icon is-small">
-                <i *ngIf="!isCategory" class="fas fa-plus"></i>
-                <i *ngIf="isCategory" class="fas fa-minus"></i>
-            </span>
-        </button>
-        <button class="level-item button" (click)="showOptions('color')">
-            <span>Color</span>
-            <span class="icon is-small">
-                <i *ngIf="!isColor" class="fas fa-plus"></i>
-                <i *ngIf="isColor" class="fas fa-minus"></i>
-            </span>
-        </button>
-        <button class="level-item button" (click)="showOptions('price')">
-            <span>Price</span>
-            <span class="icon is-small">
-                <i *ngIf="!isPrice" class="fas fa-plus"></i>
-                <i *ngIf="isPrice" class="fas fa-minus"></i>
-            </span>
-        </button>
+    </div>
+</div>
+
+<div *ngFor="let category of categories">
+    <div class="box level px-3" *ngIf="category.selected">
+        <div class="level-left">
+            <div class="level-item" *ngFor="let filter of filters | filter: category.type">
+                <input [id]="filter.value" type="checkbox" class="checkbox">
+                <label [for]="filter.value">{{ filter.display }}</label>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -38,42 +28,6 @@
         </span>
         <span>Filter</span>
     </button>
-</div>
-
-<div class="box level px-3" *ngIf="isGender">
-    <div class="level-left">
-        <div class="level-item" *ngFor="let filter of filters | filter: 'gender'">
-            <input [id]="filter.value" type="checkbox" class="checkbox">
-            <label [for]="filter.value">{{ filter.display }}</label>
-        </div>
-    </div>
-</div>
-
-<div class="box level px-3" *ngIf="isCategory">
-    <div class="level-left">
-        <div class="level-item" *ngFor="let filter of filters | filter: 'category'">
-            <input [id]="filter.value" type="checkbox" class="checkbox">
-            <label [for]="filter.value">{{ filter.display }}</label>
-        </div>
-    </div>
-</div>
-
-<div class="box level px-3" *ngIf="isColor">
-    <div class="level-left">
-        <div class="level-item" *ngFor="let filter of filters | filter: 'color'">
-            <input [id]="filter.value" type="checkbox" class="checkbox">
-            <label [for]="filter.value">{{ filter.display }}</label>
-        </div>
-    </div>
-</div>
-
-<div class="box level px-3" *ngIf="isPrice">
-    <div class="level-left">
-        <div class="level-item" *ngFor="let filter of filters | filter: 'price'">
-            <input [id]="filter.value" type="checkbox" class="checkbox">
-            <label [for]="filter.value">{{ filter.display }}</label>
-        </div>
-    </div>
 </div>
 
 <div class="modal is-justify-content-flex-end" [ngClass]="{'is-active': isVisible}">
@@ -88,46 +42,23 @@
             </p>
             <button class="delete" aria-label="close" (click)="toggleFilter()"></button>
         </header>
+
         <section class="modal-card-body">
             <nav class="panel"> 
-                <a class="panel-block is-block">
-                    <details>
-                        <summary>Gender</summary>
-                        <div class="py-2" *ngFor="let filter of filters | filter: 'gender'">
-                            <input [id]="filter.value" type="checkbox" class="checkbox">
-                            <label [for]="filter.value">{{ filter.display }}</label>
-                        </div>
-                    </details>
-                </a>
-                <a class="panel-block is-block">
-                    <details>
-                        <summary>Category</summary>
-                        <div class="py-2" *ngFor="let filter of filters | filter: 'category'">
-                            <input [id]="filter.value" type="checkbox" class="checkbox">
-                            <label [for]="filter.value">{{ filter.display }}</label>
-                        </div>
-                    </details>
-                </a>
-                <a class="panel-block is-block">
-                    <details>
-                        <summary>Color</summary>
-                        <div class="py-2" *ngFor="let filter of filters | filter: 'color'">
-                            <input [id]="filter.value" type="checkbox" class="checkbox">
-                            <label [for]="filter.value">{{ filter.display }}</label>
-                        </div>
-                    </details>
-                </a>
-                <a class="panel-block is-block">
-                    <details>
-                        <summary>Price</summary>
-                        <div class="py-2" *ngFor="let filter of filters | filter: 'price'">
-                            <input [id]="filter.value" type="checkbox" class="checkbox">
-                            <label [for]="filter.value">{{ filter.display }}</label>
-                        </div>
-                    </details>
-                </a>
+                <div *ngFor="let category of categories">
+                    <a class="panel-block is-block">
+                        <details>
+                            <summary>{{ category.type | titlecase }}</summary>
+                            <div class="py-2" *ngFor="let filter of filters | filter: category.type">
+                                <input [id]="filter.value" type="checkbox" class="checkbox">
+                                <label [for]="filter.value">{{ filter.display }}</label>
+                            </div>
+                        </details>
+                    </a>
+                </div>
             </nav>
         </section>
+
         <footer class="modal-card-foot is-justify-content-center">
             <button class="button" (click)="toggleFilter()">Cancel</button>
             <button class="button is-dark">Apply</button>
