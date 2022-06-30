@@ -12,10 +12,11 @@ export class ProductService {
   constructor(private httpClient: HttpClient) { }
 
   getProducts() {
-    return this.httpClient.get<Product[]>('/assets/products.json');
+    // return this.httpClient.get<Product[]>('assets/products.json');
+    return this.httpClient.get<Product[]>('assets/products-deploy.json');
   }
 
   getCategories() {
-    return this.httpClient.get<Filter[]>('/assets/filters.json');
+    return this.httpClient.get<Filter[]>('assets/filters.json');
   }
 }

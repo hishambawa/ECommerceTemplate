@@ -1,5 +1,5 @@
 .hero-main {
-    background-image: url('/assets/images/home/home-1-mobile.jpg');
+    background-image: url('../../assets/images/home/home-1-mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -34,6 +34,6 @@
 /* Desktop */
 @media(min-width: 1408px) {
     .hero-main {
-        background-image: url('/assets/images/home/home-1.jpg');
+        background-image: url('../../assets/images/home/home-1.jpg');
     }
 }

@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.cartService.getItems();
-    // this.items.push(new Item("test", "S", 1, 1000, '/assets/images/products/001-front.png'));
+    // this.items.push(new Item("test", "S", 1, 1000, 'assets/images/products/001-front.png'));
   }
 
 }
