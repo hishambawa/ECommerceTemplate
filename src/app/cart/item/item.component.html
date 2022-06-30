@@ -1,0 +1,50 @@
+<div class="box mb-2 cart-item">
+    <div class="columns is-mobile is-vcentered is-multiline">
+
+        <div class="column is-4-mobile is-2-desktop">
+            <img [src]="item.image" alt="" class="product-image">
+        </div>
+
+        <div class="column is-8-mobile">
+            <p class="title is-6">{{ item.name }}</p>
+            <p class="subtitle is-6">Size: {{ item.size }} <span class="is-hidden-tablet"><br> Price:  {{ item.price | currency: "LKR " }}</span></p>
+        </div>
+
+        <div class="column is-2-desktop is-offset-4-mobile">
+            <div class="field has-addons is-justify-content-center">
+                <div class="control">
+                    <button class="button is-dark is-rounded is-small">
+                        <span class="icon"><i class="fas fa-minus"></i></span>
+                    </button>
+                </div>
+                <div class="control">
+                    <input class="input is-small-square is-small" type="text" [value]="item.quantity" readonly>
+                </div>
+                <div class="control">
+                    <button class="button is-dark is-rounded is-small">
+                        <span class="icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-1-desktop has-text-centered">
+            <button class="button is-rounded is-dark is-small is-hidden-mobile">
+                <span class="icon">
+                    <i class="fa fas fa-trash-alt"></i>
+                </span>
+                <!-- <span>Remove</span> -->
+            </button>
+            <button class="button is-circle is-dark is-small is-hidden-tablet">
+                <span class="icon">
+                    <i class="fa fas fa-trash-alt"></i>
+                </span>
+            </button>
+        </div>
+
+        <div class="column is-2-desktop has-text-centered is-hidden-mobile">
+            <p class="title is-6"> {{ item.price | currency: "LKR " }}</p>
+        </div>
+        
+    </div>
+</div>

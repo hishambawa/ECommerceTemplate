@@ -21,11 +21,16 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - Home Page - ✅
 - Products Page - ✅
 - Product Page - ✅
-- Cart
-- Checkout Page
+- Cart - ✅
 - Contact Page - ✅
 - Filter - ✅
 
 ## Future Implementations
 
 - Filter Functionality
+- Cart Storage
+- Checkout
+- Add to Cart
+    - Notification
+    - Navbar Update
+- Update Cart

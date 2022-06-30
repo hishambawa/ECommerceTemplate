@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,9 @@ export class NavbarComponent implements OnInit {
   isContactPage!: boolean;
   isCollapsed: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cartService: CartService) { this.count = this.cartService.getItems().length;}
+
+  count: number = 0;
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
@@ -34,8 +37,11 @@ export class NavbarComponent implements OnInit {
 
         // Hide the navbar on mobile after clicking on a link
         this.isCollapsed = false;
+
+        this.count = this.cartService.getItems().length;
       }
     });
+
   }
 
   showNavbar(): void {

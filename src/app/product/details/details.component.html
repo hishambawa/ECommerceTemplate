@@ -24,55 +24,75 @@
 
                 <P class="title is-6">Size</P>
 
-                <div class="field is-grouped" *ngIf="product?.category != 'shoes'">
+                <div class="field is-grouped" *ngIf="product?.category != 'shoe'">
                     <p class="control">
-                      <button class="button is-dark is-outlined">
+                      <button class="button is-dark" [ngClass]="{'is-outlined': size != 'S'}" (click)="setSize('S')">
                         <span class="icon"><i class="fa-solid fa-s"></i></span>
                       </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != 'M'}" (click)="setSize('M')">
                             <span class="icon"><i class="fa-solid fa-m"></i></span>
                         </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != 'L'}" (click)="setSize('L')">
                             <span class="icon"><i class="fa-solid fa-l"></i></span>
                         </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != 'XL'}" (click)="setSize('XL')">
                             <span class="icon"><i class="fa-solid fa-x"></i><i class="fa-solid fa-l"></i></span>
                         </button>
                     </p>
                 </div>
 
-                <div class="field is-grouped" *ngIf="product?.category == 'shoes'">
+                <div class="field is-grouped" *ngIf="product?.category == 'shoe'">
                     <p class="control">
-                      <button class="button is-dark is-outlined">
+                      <button class="button is-dark" [ngClass]="{'is-outlined': size != '8'}" (click)="setSize('8')">
                         <span class="icon"><i class="fa-solid fa-8"></i></span>
                       </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != '9'}" (click)="setSize('9')">
                             <span class="icon"><i class="fa-solid fa-9"></i></span>
                         </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != '10'}" (click)="setSize('10')">
                             <span class="icon"><i class="fa-solid fa-1"></i><i class="fa-solid fa-0"></i></span>
                         </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != '11'}" (click)="setSize('11')">
                             <span class="icon"><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i></span>
                         </button>
                     </p>
                     <p class="control">
-                        <button class="button is-dark is-outlined">
+                        <button class="button is-dark" [ngClass]="{'is-outlined': size != '12'}" (click)="setSize('12')">
                             <span class="icon"><i class="fa-solid fa-1"></i><i class="fa-solid fa-2"></i></span>
                         </button>
                     </p>
+                </div>
+
+                <br>
+
+                <P class="title is-6">Quantity</P>
+
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-dark is-rounded is-small" (click)="setQuantity(0)">
+                            <span class="icon"><i class="fas fa-minus"></i></span>
+                        </button>
+                    </div>
+                    <div class="control">
+                        <input class="input is-small-square is-small" type="text" [value]="quantity" readonly>
+                    </div>
+                    <div class="control">
+                        <button class="button is-dark is-rounded is-small" (click)="setQuantity(1)">
+                            <span class="icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                    </div>
                 </div>
 
                 <br>
@@ -81,7 +101,8 @@
                     <span class="has-text-danger" *ngIf="!product?.available">Out of Stock</span>
                 </p>
 
-                <button class="button is-rounded is-dark mt-3" [disabled]="!product?.available">Add to Cart</button>
+                <button class="button is-rounded is-dark mt-3" [disabled]="!product?.available"
+                (click)="addToCart(product?.name, product?.price, product?.frontImage)">Add to Cart</button>
             </div>
         </div>
     </div>

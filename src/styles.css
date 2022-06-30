@@ -8,6 +8,15 @@ body {
     border-radius: 50% !important;
 }
 
+.is-small-square {
+    width: 36px !important;
+    text-align: center;
+}
+
+.product-image {
+    background-color: #F2F2F2;
+}
+
 /* Margins */
 .has-margin-auto {
     margin: auto !important;

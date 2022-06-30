@@ -1,0 +1,45 @@
+<section class="section">
+    <div class="container">
+        <div class="cart-container hero is-large" *ngIf="items.length > 0">
+            <div class="hero-head is-flex-direction-column">
+                <h1 class="title is-4">My Cart</h1>
+                <app-item *ngFor="let item of items" [item]="item"></app-item>
+                
+            </div>
+            <div class="hero-body pt-6 px-0">
+                <div class="columns mt-5 is-multiline">
+                    <div class="column">
+                        <div class="box">
+                            <p class="title is-6 has-text-centered">Discount: LKR 0</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <p class="title is-6 has-text-centered">Shipping: LKR 0</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <p class="title is-6 has-text-centered">Subtotal: LKR 10,000</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <p class="title is-6 has-text-centered">Total: LKR 10,000</p>
+                        </div>
+                    </div>
+                    <div class="column is-quarter is-offset-three-quarters has-text-centered">
+                        <button class="button is-rounded is-dark">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero is-halfheight is-large" *ngIf="items.length == 0">
+            <div class="hero-body is-flex-direction-column">
+                <h1 class="title is-6">The cart is empty</h1>
+            </div>
+        </div>
+           
+    </div>
+</section>
